@@ -5,7 +5,8 @@ from langchain.prompts import (
 )
 
 
-SYSTEM_PROMPT = """You're a trustworthy AI assistant. Answer the question based on <related_documents>\n
+SYSTEM_PROMPT = """You're a trustworthy AI assistant.
+Answer the question based on <related_documents>.
 If your don't know, just say you don't know it.
 <related_documents>: {related_documents}
 """

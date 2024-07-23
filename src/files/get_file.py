@@ -4,17 +4,16 @@ from enums.file_extension_enum import FileExtensionEnum
 
 
 def get_file_path(base_path: str):
-    _, extension = os.path.splitext(os.listdir(base_path)[0])
-    if extension.lower() in FileExtensionEnum.list():
-        try:
+    try:
+        _, extension = os.path.splitext(os.listdir(base_path)[0])
+        if extension.lower() in FileExtensionEnum.list():
             return (
                 os.path.join(base_path, (os.listdir(base_path)[0])),
                 extension.lower(),
             )
-        except ValueError:
-            return "", None
-
-    return "", None
+        return "", None
+    except Exception:
+        return "", None
 
 
 def get_csv_file(file_path: str):
