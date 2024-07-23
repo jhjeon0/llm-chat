@@ -14,3 +14,15 @@ $ pip install -r requirements.txt
 $ cd src
 $ mesop main.py
 ```
+
+### image
+
+![image](./result/image.png)
+
+### csv
+
+![csv](./result/csv.png)
+
+### history
+
+![history](./result/history.png)
